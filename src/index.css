@@ -1,0 +1,43 @@
+/* google font prata */
+
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+* {
+  font-family: Outfit;
+}
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active {
+  width: 100%;
+  left: 0;
+}
+.li::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Line will appear just under the li */
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #333;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+/* Hover effect: Line expands from center */
+.li:hover::after {
+  width: 100%;
+  left: 0;
+}
+a.active::after {
+  width: 100%;
+  left: 0;
+}
